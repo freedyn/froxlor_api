@@ -12,15 +12,16 @@
 #########################################################################
 
 ## Configuration
-$api['apikey'] 			= '1234';
+$api['apikey'] 			= '8617f366566a011837f4fb4ba5bedea2b892f3ed8b894023d16ae344b2be5881';	// AUTH with Key insteat of login details of reseller account
+$api['use_key_auth']	= true;							// use key (true) or froxlor login (false) data to connent to api
 $api['debug'] 			= '1';							// debug to view php erros
 $api['froxlorconfig'] 	= '../lib/userdata.inc.php';	// Path to userdata.inc.php
 $api['admin_username']	= 'admin';						// Loginname of your admin account
 $api['usershell']		= '/bin/false';					// Shell for FTP-Users
-$api['admin_protect']	= true;							// true = can only update own customers / false = can update all customers
+$api['admin_protect']	= true;							// for later functions - if false -> can see and edit all customers
 
 #########################################################################
-# Functions - do not change
+# Functions - do not change below here
 #########################################################################
 $api['keyok'] = false;
 $api['api_version'] = '2017.0.1';
