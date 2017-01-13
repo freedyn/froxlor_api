@@ -1,7 +1,11 @@
-<h1>Froxlor  api</h1>
+<h1>Froxlor api</h1>
 <p>Version 20170113</p>
 <p>Installation:<br>
   Copy all Files into your Froxlor directory. That was the simple installation.</p>
+<p>Usage:<br>
+You can call the api over GET-request on http://yourfroxlorlor.url/api.php<br>
+for AUTH you must give the parameter <strong>adminlogin</strong> and <strong>adminpassword</strong> to authentificate on api with your admin or reseller account.</p>
+<p>The <strong>func</strong> parameter will set, witch action you to start. Needed parameters you can see in follow lists:</p>
 <p><strong>Add customer account:</strong></p>
 <table width="90%">
   <tbody>
@@ -12,7 +16,7 @@
       <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
     </tr>
     <tr>
-      <td bgcolor="#D7D7D7">function</td>
+      <td bgcolor="#D7D7D7"><strong>func</strong></td>
       <td bgcolor="#D7D7D7">customeradd</td>
       <td bgcolor="#D7D7D7">yes</td>
       <td bgcolor="#FDA79E">get error</td>
@@ -224,7 +228,7 @@
       <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
     </tr>
     <tr>
-      <td bgcolor="#D7D7D7">function</td>
+      <td bgcolor="#D7D7D7"><strong>func</strong></td>
       <td bgcolor="#D7D7D7">customerdelete</td>
       <td bgcolor="#D7D7D7">yes</td>
       <td bgcolor="#FDA79E">get error</td>
@@ -251,7 +255,7 @@ comes in next version
       <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
     </tr>
     <tr>
-      <td bgcolor="#D7D7D7">function</td>
+      <td bgcolor="#D7D7D7"><strong>func</strong></td>
       <td bgcolor="#D7D7D7">customernewpasswd</td>
       <td bgcolor="#D7D7D7">yes</td>
       <td bgcolor="#FDA79E">get error</td>
@@ -280,7 +284,7 @@ comes in next version
       <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
     </tr>
     <tr>
-      <td bgcolor="#D7D7D7">function</td>
+      <td bgcolor="#D7D7D7"><strong>func</strong></td>
       <td bgcolor="#D7D7D7">customerlock</td>
       <td bgcolor="#D7D7D7">yes</td>
       <td bgcolor="#FDA79E">get error</td>
@@ -310,7 +314,7 @@ comes in next version
       <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
     </tr>
     <tr>
-      <td bgcolor="#D7D7D7">function</td>
+      <td bgcolor="#D7D7D7"><strong>func</strong></td>
       <td bgcolor="#D7D7D7">customerdomain</td>
       <td bgcolor="#D7D7D7">yes</td>
       <td bgcolor="#FDA79E">get error</td>
@@ -510,7 +514,7 @@ comes in next version
       <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
     </tr>
     <tr>
-      <td bgcolor="#D7D7D7">function</td>
+      <td bgcolor="#D7D7D7"><strong>func</strong></td>
       <td bgcolor="#D7D7D7">customerdomain</td>
       <td bgcolor="#D7D7D7">yes</td>
       <td bgcolor="#FDA79E">get error</td>
@@ -548,7 +552,7 @@ comes in next version
       <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
     </tr>
     <tr>
-      <td bgcolor="#D7D7D7">function</td>
+      <td bgcolor="#D7D7D7"><strong>func</strong></td>
       <td bgcolor="#D7D7D7">listcustomers</td>
       <td bgcolor="#D7D7D7">yes</td>
       <td bgcolor="#FDA79E">get error</td>
@@ -566,7 +570,7 @@ comes in next version
       <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
     </tr>
     <tr>
-      <td bgcolor="#D7D7D7">function</td>
+      <td bgcolor="#D7D7D7"><strong>func</strong></td>
       <td bgcolor="#D7D7D7">listdomains</td>
       <td bgcolor="#D7D7D7">yes</td>
       <td bgcolor="#FDA79E">get error</td>
@@ -589,7 +593,7 @@ comes in next version
       <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
     </tr>
     <tr>
-      <td bgcolor="#D7D7D7">function</td>
+      <td bgcolor="#D7D7D7"><strong>func</strong></td>
       <td bgcolor="#D7D7D7">listcustomerressources</td>
       <td bgcolor="#D7D7D7">yes</td>
       <td bgcolor="#FDA79E">get error</td>
@@ -598,23 +602,6 @@ comes in next version
       <td bgcolor="#D0DCFC">username</td>
       <td bgcolor="#D0DCFC"><em>the loginname of customer</em></td>
       <td bgcolor="#D0DCFC">yes</td>
-      <td bgcolor="#FDA79E">get error</td>
-    </tr>
-  </tbody>
-</table>
-<p><strong>Check updates of api script:</strong></p>
-<table width="90%">
-  <tbody>
-    <tr>
-      <td bgcolor="#90A0FF"><strong>Variable:</strong></td>
-      <td bgcolor="#90A0FF"><strong>Input:</strong></td>
-      <td bgcolor="#90A0FF"><strong>Required:</strong></td>
-      <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
-    </tr>
-    <tr>
-      <td bgcolor="#D7D7D7">function</td>
-      <td bgcolor="#D7D7D7">listcustomers</td>
-      <td bgcolor="#D7D7D7">yes</td>
       <td bgcolor="#FDA79E">get error</td>
     </tr>
   </tbody>
