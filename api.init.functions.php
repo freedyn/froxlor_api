@@ -56,7 +56,7 @@ function api_init_vars () {
 	$api['default_language'] = $standardlanguage_row['value'];
 
 	# Read panel.default_theme
-	$default_theme_result = mysqli_query($conn_froxlor_db, "SELECT value FROM `panel_settings` WHERE `settinggroup` = 'panel' AND `varname` = 'standardlanguage';");
+	$default_theme_result = mysqli_query($conn_froxlor_db, "SELECT value FROM `panel_settings` WHERE `settinggroup` = 'panel' AND `varname` = 'default_theme';");
 	$default_theme_row = $default_theme_result->fetch_assoc();
 	$api['default_theme'] = $default_theme_row['value'];
 	
@@ -79,8 +79,8 @@ function customer_id_by_name ($username) {
 	$conn_froxlor_db = new mysqli($sql['host'], $sql['user'], $sql['password'], $sql['db']);
 		$username = mysqli_real_escape_string($conn_froxlor_db, $username);
 		$read_new_id_result = mysqli_query($conn_froxlor_db, "SELECT customerid FROM `panel_customers` WHERE `loginname` = '".$username."';");
-		$read_new_id__row = $read_new_id_result->fetch_assoc();
-        $new_user_id = $read_new_id__row['customerid'];
+		$read_new_id_row = $read_new_id_result->fetch_assoc();
+        $new_user_id = $read_new_id_row['customerid'];
 	
 		mysqli_close($conn_froxlor_db);
 		return $read_new_id_result_row['customerid'];
@@ -103,4 +103,24 @@ function check_your_user ($username) {
 		$your_user_row = $your_user_result->fetch_assoc();
 		mysqli_close($conn_froxlor_db);
 		if ($api['adminid'] = $your_user_row['adminid']) { return true; } else { return false; };
+};
+
+function check_domain_exist ($domainname) {
+	global $sql, $api;
+	$conn_froxlor_db = new mysqli($sql['host'], $sql['user'], $sql['password'], $sql['db']);
+		$username = mysqli_real_escape_string($conn_froxlor_db, $username);
+		$user_exist_result = mysqli_query($conn_froxlor_db, "SELECT id FROM `panel_domains` WHERE `domain` = '".$domainname."';");
+		mysqli_close($conn_froxlor_db);
+		if (mysqli_num_rows($user_exist_result) > 0) { return true; } else { return false; };
+};
+
+function domain_id_by_name ($domainname) {
+	global $sql, $api;
+	$conn_froxlor_db = new mysqli($sql['host'], $sql['user'], $sql['password'], $sql['db']);
+		$domainname = mysqli_real_escape_string($conn_froxlor_db, $domainname);
+		$domain_exist_result = mysqli_query($conn_froxlor_db, "SELECT id FROM `panel_domains` WHERE `domain` = '".$domainname."';");
+		$domain_exist_row = $domain_exist_result->fetch_assoc();
+	
+		mysqli_close($conn_froxlor_db);
+		return $domain_exist_row['id'];
 };
