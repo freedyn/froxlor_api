@@ -69,6 +69,16 @@ function api_init_vars () {
 	$read_admin_id_result = mysqli_query($conn_froxlor_db,"SELECT adminid FROM `panel_admins` WHERE `loginname` = '".$api['admin_username']."';");
 	$read_admin_id_row = $read_admin_id_result->fetch_assoc();
 	$api['adminid'] = $read_admin_id_row['adminid'];
+	
+	# Get last account number
+	$lastaccountnumber_result = mysqli_query($conn_froxlor_db, "SELECT value FROM `panel_settings` WHERE `settinggroup` = 'system' AND `varname` = 'lastaccountnumber';");
+	$lastaccountnumber_row = $lastaccountnumber_result->fetch_assoc();
+	$api['lastaccountnumber'] = $lastaccountnumber_row['value'];
+	
+	# Get accountprefix
+	$accountprefix_result = mysqli_query($conn_froxlor_db, "SELECT value FROM `panel_settings` WHERE `settinggroup` = 'customer' AND `varname` = 'accountprefix';");
+	$accountprefix_row = $accountprefix_result->fetch_assoc();
+	$api['accountprefix'] = $accountprefix_row['value'];
 
 	mysqli_close($conn_froxlor_db);
 	return true;
@@ -123,4 +133,13 @@ function domain_id_by_name ($domainname) {
 	
 		mysqli_close($conn_froxlor_db);
 		return $domain_exist_row['id'];
+};
+
+function generateUsername () {
+	global $sql, $api;
+	$conn_froxlor_db = new mysqli($sql['host'], $sql['user'], $sql['password'], $sql['db']);
+		$newusername = $api['accountprefix'] . ($api['lastaccountnumber'] + 1);
+		mysqli_query($conn_froxlor_db,"UPDATE `panel_settings` SET `value` = `value` + 1 WHERE `settinggroup` = 'system' AND `varname` = 'lastaccountnumber';");
+		mysqli_close($conn_froxlor_db);
+		return $newusername;
 };
