@@ -1,117 +1,216 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Froxlor Admin-API</title>
-</head>
-
-<body>
 <h1>Froxlor customer api</h1>
-<p><strong>Function add customer:</strong></p>
-<table width="200" border="1">
+<p>Version 20170113</p>
+<p><strong>Add customer account:</strong></p>
+<table width="90%">
   <tbody>
     <tr>
-      <td>Variable:</td>
-      <td>Input:</td>
-      <td>Required:</td>
+      <td bgcolor="#90A0FF"><strong>Variable:</strong></td>
+      <td bgcolor="#90A0FF"><strong>Input:</strong></td>
+      <td bgcolor="#90A0FF"><strong>Required:</strong></td>
+      <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D7D7D7">function</td>
+      <td bgcolor="#D7D7D7">customeradd</td>
+      <td bgcolor="#D7D7D7">yes</td>
+      <td bgcolor="#FDA79E">get error</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">username</td>
+      <td bgcolor="#D0DCFC"><em>new loginname for customer</em></td>
+      <td bgcolor="#D0DCFC">yes</td>
+      <td bgcolor="#FDA79E">get error</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">name</td>
+      <td bgcolor="#D0DCFC">&nbsp;</td>
+      <td colspan="2" rowspan="3" bgcolor="#D0DCFC">it must set company or fistname and name. if not set anyone get error</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">firstname</td>
+      <td bgcolor="#D0DCFC">&nbsp;</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">company</td>
+      <td bgcolor="#D0DCFC">&nbsp;</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">street</td>
+      <td bgcolor="#D0DCFC">&nbsp;</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to <em>null</em></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">zipcode</td>
+      <td bgcolor="#D0DCFC">&nbsp;</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to <em>null</em></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">city</td>
+      <td bgcolor="#D0DCFC">&nbsp;</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to <em>null</em></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">phone</td>
+      <td bgcolor="#D0DCFC">&nbsp;</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to <em>null</em></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">fax</td>
+      <td bgcolor="#D0DCFC">&nbsp;</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to <em>null</em></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">email</td>
+      <td bgcolor="#D0DCFC">email address of customer</td>
+      <td bgcolor="#D0DCFC">yes</td>
+      <td bgcolor="#FDA79E">get error</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">customernumber</td>
+      <td bgcolor="#D0DCFC">&nbsp;</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to <em>null</em></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">def_language</td>
+      <td bgcolor="#D0DCFC">&nbsp;</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to froxlor standard language</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">gender</td>
+      <td bgcolor="#D0DCFC">0 = no / 1 = male / 2 = female</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 0</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">custom_notes</td>
+      <td bgcolor="#D0DCFC">1 or 0</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 0</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">custom_notes_show</td>
+      <td bgcolor="#D0DCFC">custom notes as longtext</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to <em>null</em></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">diskspace</td>
+      <td bgcolor="#D0DCFC">diskspace in MB</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to <em>0</em></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">traffic</td>
+      <td bgcolor="#D0DCFC">traffic in GB</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to <em>0</em></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td bgcolor="#D0DCFC">subdomains</td>
+      <td bgcolor="#D0DCFC">number of max. subdomains</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 0</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">emails</td>
+      <td bgcolor="#D0DCFC">number of max. email addresses</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 0</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">email_accounts</td>
+      <td bgcolor="#D0DCFC">number of max. pop3/imap boxes</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 0</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">email_forwarders</td>
+      <td bgcolor="#D0DCFC">number of max. email redirects</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 0</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">email_quota</td>
+      <td bgcolor="#D0DCFC">&nbsp;</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to -1</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">email_imap</td>
+      <td bgcolor="#D0DCFC">1 or 0</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 1</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">email_pop3</td>
+      <td bgcolor="#D0DCFC">1 or 0</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 1</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">ftps</td>
+      <td bgcolor="#D0DCFC">number of max. ftp users</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 0</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">phpenabled</td>
+      <td bgcolor="#D0DCFC">1 or 0</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 1</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">perlenabled</td>
+      <td bgcolor="#D0DCFC">1 or 0</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 1</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">dnsenabled</td>
+      <td bgcolor="#D0DCFC">1 or 0</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 1</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">store_defaultindex</td>
+      <td bgcolor="#D0DCFC">1 or 0</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 1</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">createstdsubdomain</td>
+      <td bgcolor="#D0DCFC">1 or 0</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 0</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">tickets</td>
+      <td bgcolor="#D0DCFC">number of max. open tickets</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 0</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">mysqls</td>
+      <td bgcolor="#D0DCFC">number of max. mysql databases</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">is set to 0</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">password</td>
+      <td bgcolor="#D0DCFC">password of new user</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#FDA79E">get error</td>
     </tr>
   </tbody>
 </table>
+<p>The function customeradd is not adding a standart subdomain un current version.</p>
 <p><strong>Delete customer account and customer files:</strong><br>
 </p>
 <table width="90%">
@@ -137,45 +236,9 @@
   </tbody>
 </table>
 <p><strong>Update customer account details:</strong></p>
-<table width="90%">
-  <tbody>
-    <tr>
-      <td bgcolor="#90A0FF"><strong>Variable:</strong></td>
-      <td bgcolor="#90A0FF"><strong>Input:</strong></td>
-      <td bgcolor="#90A0FF"><strong>Required:</strong></td>
-    </tr>
-    <tr>
-      <td>function</td>
-      <td>customerdelete</td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <td>username</td>
-      <td>the loginname of customer</td>
-      <td>yes</td>
-    </tr>
-  </tbody>
-</table>
+<p>comes in next version</p>
 <p><strong>Update customer account resources:</strong></p>
-<table width="90%">
-  <tbody>
-    <tr>
-      <td bgcolor="#90A0FF"><strong>Variable:</strong></td>
-      <td bgcolor="#90A0FF"><strong>Input:</strong></td>
-      <td bgcolor="#90A0FF"><strong>Required:</strong></td>
-    </tr>
-    <tr>
-      <td>function</td>
-      <td>customerdelete</td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <td>username</td>
-      <td>the loginname of customer</td>
-      <td>yes</td>
-    </tr>
-  </tbody>
-</table>
+comes in next version
 <p><strong>Set new password for customer account and his master ftp account:</strong></p>
 <table width="90%">
   <tbody>
@@ -264,7 +327,8 @@
     </tr>
     <tr>
       <td bgcolor="#D0DCFC">domainname</td>
-      <td bgcolor="#D0DCFC">&nbsp;</td>
+      <td bgcolor="#D0DCFC"><em>the domainname<br>
+(IDN's as Punycode!) </em></td>
       <td bgcolor="#D0DCFC">yes</td>
       <td bgcolor="#FDA79E">get error</td>
     </tr>
@@ -272,7 +336,7 @@
       <td bgcolor="#D0DCFC">ipsets</td>
       <td bgcolor="#D0DCFC">id's od ip sets (eg. 1,2,3)</td>
       <td bgcolor="#D0DCFC">no</td>
-      <td bgcolor="#D0DCFC">used standart ip's and port's</td>
+      <td bgcolor="#D0DCFC">used standart ip's and port's that configured in froxlor</td>
     </tr>
     <tr>
       <td bgcolor="#D0DCFC">binddomain</td>
@@ -471,6 +535,45 @@
     </tr>
   </tbody>
 </table>
-<p></p>
-</body>
-</html>
+<p><strong>List customer accounts:</strong></p>
+<p>Listed all customer accounts of your admin / reseller account as array.</p>
+<table width="90%">
+  <tbody>
+    <tr>
+      <td bgcolor="#90A0FF"><strong>Variable:</strong></td>
+      <td bgcolor="#90A0FF"><strong>Input:</strong></td>
+      <td bgcolor="#90A0FF"><strong>Required:</strong></td>
+      <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
+    </tr>
+    <tr>
+      <td bgcolor="#D7D7D7">function</td>
+      <td bgcolor="#D7D7D7">listcustomers</td>
+      <td bgcolor="#D7D7D7">yes</td>
+      <td bgcolor="#FDA79E">get error</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>List customer domains:</strong></p>
+<p>Listed all customer domains of your admin / reseller account as array.</p>
+<table width="90%">
+  <tbody>
+    <tr>
+      <td bgcolor="#90A0FF"><strong>Variable:</strong></td>
+      <td bgcolor="#90A0FF"><strong>Input:</strong></td>
+      <td bgcolor="#90A0FF"><strong>Required:</strong></td>
+      <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
+    </tr>
+    <tr>
+      <td bgcolor="#D7D7D7">function</td>
+      <td bgcolor="#D7D7D7">listcustomers</td>
+      <td bgcolor="#D7D7D7">yes</td>
+      <td bgcolor="#FDA79E">get error</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">username</td>
+      <td bgcolor="#D0DCFC"><em>the loginname of customer</em></td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">if no customer set, listed all customer domains</td>
+    </tr>
+  </tbody>
+</table>
