@@ -1,5 +1,7 @@
-<h1>Froxlor customer api</h1>
+<h1>Froxlor  api</h1>
 <p>Version 20170113</p>
+<p>Installation:<br>
+  Copy all Files into your Froxlor directory. That was the simple installation.</p>
 <p><strong>Add customer account:</strong></p>
 <table width="90%">
   <tbody>
@@ -18,8 +20,8 @@
     <tr>
       <td bgcolor="#D0DCFC">username</td>
       <td bgcolor="#D0DCFC"><em>new loginname for customer</em></td>
-      <td bgcolor="#D0DCFC">yes</td>
-      <td bgcolor="#FDA79E">get error</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">generate new one insteat web..<em></em></td>
     </tr>
     <tr>
       <td bgcolor="#D0DCFC">name</td>
@@ -206,7 +208,7 @@
       <td bgcolor="#D0DCFC">password</td>
       <td bgcolor="#D0DCFC">password of new user</td>
       <td bgcolor="#D0DCFC">no</td>
-      <td bgcolor="#FDA79E">get error</td>
+      <td bgcolor="#D0DCFC">generate new password</td>
     </tr>
   </tbody>
 </table>
@@ -263,8 +265,8 @@ comes in next version
     <tr>
       <td bgcolor="#D0DCFC">password</td>
       <td bgcolor="#D0DCFC"><em>the new password</em></td>
-      <td bgcolor="#D0DCFC">yes</td>
-      <td bgcolor="#FDA79E">get error</td>
+      <td bgcolor="#D0DCFC">no</td>
+      <td bgcolor="#D0DCFC">generate new password</td>
     </tr>
   </tbody>
 </table>
@@ -565,7 +567,7 @@ comes in next version
     </tr>
     <tr>
       <td bgcolor="#D7D7D7">function</td>
-      <td bgcolor="#D7D7D7">listcustomers</td>
+      <td bgcolor="#D7D7D7">listdomains</td>
       <td bgcolor="#D7D7D7">yes</td>
       <td bgcolor="#FDA79E">get error</td>
     </tr>
@@ -574,6 +576,46 @@ comes in next version
       <td bgcolor="#D0DCFC"><em>the loginname of customer</em></td>
       <td bgcolor="#D0DCFC">no</td>
       <td bgcolor="#D0DCFC">if no customer set, listed all customer domains</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>List used ressources from customer:</strong></p>
+<table width="90%">
+  <tbody>
+    <tr>
+      <td bgcolor="#90A0FF"><strong>Variable:</strong></td>
+      <td bgcolor="#90A0FF"><strong>Input:</strong></td>
+      <td bgcolor="#90A0FF"><strong>Required:</strong></td>
+      <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
+    </tr>
+    <tr>
+      <td bgcolor="#D7D7D7">function</td>
+      <td bgcolor="#D7D7D7">listcustomerressources</td>
+      <td bgcolor="#D7D7D7">yes</td>
+      <td bgcolor="#FDA79E">get error</td>
+    </tr>
+    <tr>
+      <td bgcolor="#D0DCFC">username</td>
+      <td bgcolor="#D0DCFC"><em>the loginname of customer</em></td>
+      <td bgcolor="#D0DCFC">yes</td>
+      <td bgcolor="#FDA79E">get error</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Check updates of api script:</strong></p>
+<table width="90%">
+  <tbody>
+    <tr>
+      <td bgcolor="#90A0FF"><strong>Variable:</strong></td>
+      <td bgcolor="#90A0FF"><strong>Input:</strong></td>
+      <td bgcolor="#90A0FF"><strong>Required:</strong></td>
+      <td bgcolor="#90A0FF"><strong>If not set:</strong></td>
+    </tr>
+    <tr>
+      <td bgcolor="#D7D7D7">function</td>
+      <td bgcolor="#D7D7D7">listcustomers</td>
+      <td bgcolor="#D7D7D7">yes</td>
+      <td bgcolor="#FDA79E">get error</td>
     </tr>
   </tbody>
 </table>
